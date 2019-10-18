@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">CRUD Trabalho</string>
+    <string name="crud_da_galera">CRUD da Galera</string>
+    <string name="listar_editar_ou_excluir">Listar - Editar ou Excluir</string>
+    <string name="computa_o_m_vel">Computação Móvel</string>
+    <string name="igor">Igor</string>
+    <string name="valdemar">Valdemar</string>
+    <string name="luis">Luis</string>
+    <string name="guilherme">Guilherme</string>
+    <string name="sair">Sair</string>
+    <string name="inserir_novo">Inserir novo</string>
+    <string name="detalhes_do_aluno">Detalhes do Aluno</string>
+    <string name="editar">Editar</string>
+    <string name="excluir_registro">Excluir registro</string>
+    <string name="campus">Campus:</string>
+    <string name="nome">Nome:</string>
+    <string name="curso">Curso:</string>
+    <string name="dados_do_aluno">Dados do Aluno</string>
+    <string name="id">ID:</string>
+    <string name="ra">RA:</string>
+    <string name="salvar">Salvar</string>
+    <string name="informe_o_ra">Informe o ra</string>
+    <string name="informe_o_curso">Informe o curso</string>
+    <string name="inserir_novo_registro">Inserir novo registro</string>
+    <string name="informe_o_nome">Informe o nome</string>
+    <string name="informe_o_campus">Informe o campus</string>
+    <string name="inserir">Inserir</string>
+    <string name="alunos_cadastrados">Alunos Cadastrados</string>
+    <string name="Gerenciador_de_alunos">Gerenciador de Alunos </string>
+    <string name="luiz">Luiz</string>
+</resources>
