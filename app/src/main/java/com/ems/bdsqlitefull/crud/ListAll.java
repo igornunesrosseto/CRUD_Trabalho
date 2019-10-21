@@ -16,8 +16,10 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
+import com.ems.bdsqlitefull.MainActivity;
 import com.ems.bdsqlitefull.R;
 import com.ems.bdsqlitefull.pojo.Aluno;
+import com.ems.bdsqlitefull.utils.Message;
 
 import java.util.ArrayList;
 
@@ -58,6 +60,8 @@ public class ListAll extends AppCompatActivity {
         changeBG.setBackgroundResource(R.drawable.circuitsbg);
         // Carrega os registros em ordem alfabética no ArrayList para anexar ao adaptador
         alunos.clear();
+
+        try{
         Cursor c = db.rawQuery("SELECT * FROM aluno ORDER BY nome ASC", null);
         while (c.moveToNext()) {
             alunos.add(new Aluno(
@@ -67,6 +71,15 @@ public class ListAll extends AppCompatActivity {
                     c.getString(3),
                     c.getString(4)));
         }
+
+    } catch (Exception ex) {
+        // bloco de tratamento associado à condição de
+        // exceção XException ou a qualquer uma de suas
+        // subclasses, identificada aqui pelo objeto
+        // com referência ex
+            Toast.makeText(this, "Não há registros", Toast.LENGTH_SHORT).show();
+
+    }
 
         if (alunos.size() == 0) {
             Toast.makeText(this, "Não há registros", Toast.LENGTH_SHORT).show();

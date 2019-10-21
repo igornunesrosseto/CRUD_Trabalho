@@ -9,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.ems.bdsqlitefull.crud.Insert;
 import com.ems.bdsqlitefull.crud.ListAll;
+import com.ems.bdsqlitefull.utils.Message;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -26,8 +27,10 @@ public class MainActivity extends AppCompatActivity {
         btInsert.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 Intent insert = new Intent(getApplicationContext(), Insert.class);
                 startActivity(insert);
+
             }
         });
 
@@ -39,8 +42,10 @@ public class MainActivity extends AppCompatActivity {
                 // Cria uma caixa de mensagem e mostra os dados incluídos
                 //Message message = new Message(MainActivity.this);
                 //message.show("Dados incluídos com sucesso!","Dados", R.drawable.ic_add);
+
                 Intent insert = new Intent(getApplicationContext(), ListAll.class);
                 startActivity(insert);
+
             }
         });
 
