@@ -72,9 +72,9 @@
 
     <TextView
         android:id="@+id/textView7"
-        android:layout_width="265dp"
-        android:layout_height="35dp"
-        android:text="@string/valdemar"
+        android:layout_width="371dp"
+        android:layout_height="32dp"
+        android:text="@string/valdemar_dos_reis_oliveira_419120208"
         android:textAlignment="center"
         android:textColor="#F2FCFAFA"
         android:textSize="20sp"
@@ -86,9 +86,9 @@
 
     <TextView
         android:id="@+id/textView9"
-        android:layout_width="265dp"
-        android:layout_height="35dp"
-        android:text="@string/guilherme"
+        android:layout_width="306dp"
+        android:layout_height="30dp"
+        android:text="@string/guilherme_ramos_916111476"
         android:textAlignment="center"
         android:textColor="#F2FCFAFA"
         android:textSize="20sp"
@@ -100,9 +100,9 @@
 
     <TextView
         android:id="@+id/textView11"
-        android:layout_width="265dp"
-        android:layout_height="35dp"
-        android:text="@string/igor"
+        android:layout_width="365dp"
+        android:layout_height="34dp"
+        android:text="@string/igor_nunes_rosseto_409101117"
         android:textAlignment="center"
         android:textColor="#F2FCFAFA"
         android:textSize="20sp"
@@ -129,9 +129,9 @@
 
     <TextView
         android:id="@+id/textView13"
-        android:layout_width="265dp"
-        android:layout_height="35dp"
-        android:text="@string/luiz"
+        android:layout_width="382dp"
+        android:layout_height="29dp"
+        android:text="@string/luiz_alberto_perez_j_nior_3016107194"
         android:textAlignment="center"
         android:textColor="#F2FCFAFA"
         android:textSize="20sp"

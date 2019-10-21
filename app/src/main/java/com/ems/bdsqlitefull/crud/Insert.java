@@ -2,8 +2,10 @@ package com.ems.bdsqlitefull.crud;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
@@ -12,6 +14,7 @@ import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.ems.bdsqlitefull.MainActivity;
 import com.ems.bdsqlitefull.pojo.Aluno;
 import com.ems.bdsqlitefull.R;
 import com.ems.bdsqlitefull.utils.Message;
@@ -77,8 +80,17 @@ public class Insert extends AppCompatActivity {
                         aluno.getDados(),
                         R.drawable.ic_add);
 
+                Handler waitTime = new Handler(); // método para aguardar tempo
+                waitTime.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        Intent main = new Intent(getApplicationContext(), ListAll.class);
+                        startActivity(main);
+                    }
+                }, 1000);
+
                 // Limpa os campos de entrada
-                clearText();
+                // clearText();
             }
         });
     }

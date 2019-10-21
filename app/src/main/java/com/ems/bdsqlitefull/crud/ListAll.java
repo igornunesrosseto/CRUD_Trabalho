@@ -14,6 +14,7 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 import com.ems.bdsqlitefull.R;
 import com.ems.bdsqlitefull.pojo.Aluno;
@@ -26,6 +27,7 @@ public class ListAll extends AppCompatActivity {
     ArrayAdapter<Aluno> adaptador;
     SQLiteDatabase db;
     Button btInsert;
+    ConstraintLayout changeBG;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,6 +44,7 @@ public class ListAll extends AppCompatActivity {
         // Abreo banco de dados existente
         db = openOrCreateDatabase("db_aluno", Context.MODE_PRIVATE, null);
 
+        changeBG = findViewById(R.id.cl1);
         listViewAlunos = findViewById(R.id.listagem);
         btInsert = findViewById((R.id.btMainInsert2));
         btInsert.setOnClickListener(new View.OnClickListener() {
@@ -52,7 +55,7 @@ public class ListAll extends AppCompatActivity {
             }
         });
 
-
+        changeBG.setBackgroundResource(R.drawable.circuitsbg);
         // Carrega os registros em ordem alfabética no ArrayList para anexar ao adaptador
         alunos.clear();
         Cursor c = db.rawQuery("SELECT * FROM aluno ORDER BY nome ASC", null);
