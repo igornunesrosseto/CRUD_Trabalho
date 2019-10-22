@@ -34,6 +34,7 @@
         android:layout_marginEnd="32dp"
         android:background="#00FFFFFF"
         android:backgroundTint="#2CD5AA"
+        android:cacheColorHint="#FD070707"
         android:foregroundTint="#45ECB1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
