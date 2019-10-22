@@ -9,7 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.ems.bdsqlitefull.crud.Insert;
 import com.ems.bdsqlitefull.crud.ListAll;
-import com.ems.bdsqlitefull.utils.Message;
+
 
 public class MainActivity extends AppCompatActivity {
 

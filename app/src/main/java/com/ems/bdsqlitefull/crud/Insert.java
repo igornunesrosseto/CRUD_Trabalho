@@ -14,7 +14,7 @@ import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.ems.bdsqlitefull.MainActivity;
+
 import com.ems.bdsqlitefull.pojo.Aluno;
 import com.ems.bdsqlitefull.R;
 import com.ems.bdsqlitefull.utils.Message;
