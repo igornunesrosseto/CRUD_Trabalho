@@ -43,25 +43,29 @@ public class ListAll extends AppCompatActivity {
         getSupportActionBar().setHomeButtonEnabled(true);
 
 
-        // Abreo banco de dados existente
+        // Abre o banco de dados existente
         db = openOrCreateDatabase("db_aluno", Context.MODE_PRIVATE, null);
 
-        changeBG = findViewById(R.id.cl1);
+        changeBG = findViewById(R.id.cl1); // troca background
         listViewAlunos = findViewById(R.id.listagem);
         btInsert = findViewById((R.id.btMainInsert2));
+
         btInsert.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
+            public void onClick(View view) {  // redireciona a classe insert
                 Intent insert = new Intent(getApplicationContext(), Insert.class);
                 startActivity(insert);
             }
         });
 
         changeBG.setBackgroundResource(R.drawable.circuitsbg);
-        // Carrega os registros em ordem alfabética no ArrayList para anexar ao adaptador
+
         alunos.clear();
 
+        // foi utilizado try catch para caso ocorra erro devido a ausencia da tabela aluno
+
         try{
+            // Carrega os registros em ordem alfabética no ArrayList para anexar ao adaptador
         Cursor c = db.rawQuery("SELECT * FROM aluno ORDER BY nome ASC", null);
         while (c.moveToNext()) {
             alunos.add(new Aluno(
@@ -80,6 +84,8 @@ public class ListAll extends AppCompatActivity {
             // com referência ex
             Toast.makeText(this, "Não há registros", Toast.LENGTH_SHORT).show();
             }
+
+            // caso não há registro na lista aluno
 
         if (alunos.size() == 0) {
             Toast.makeText(this, "Não há registros", Toast.LENGTH_SHORT).show();

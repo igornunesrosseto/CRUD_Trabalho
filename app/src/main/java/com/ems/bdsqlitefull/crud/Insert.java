@@ -32,7 +32,7 @@ public class Insert extends AppCompatActivity {
         // Abertura ou criação do Banco de Dados
         db = openOrCreateDatabase("db_aluno", Context.MODE_PRIVATE, null);
 
-        // Cria a tabela se não existir, senão carrega a tabela para uso
+        // Cria a tabela se não existir, senão carrega a tabela para uso // btw listall nao cria tabela
         db.execSQL("CREATE TABLE IF NOT EXISTS aluno(" +
                 "id INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 "ra VARCHAR NOT NULL, " +
@@ -80,17 +80,18 @@ public class Insert extends AppCompatActivity {
                         aluno.getDados(),
                         R.drawable.ic_add);
 
+                // chamando o activity listall com delay de 1s.
+
                 Handler waitTime = new Handler(); // método para aguardar tempo
                 waitTime.postDelayed(new Runnable() {
                     @Override
                     public void run() {
-                        Intent main = new Intent(getApplicationContext(), ListAll.class);
-                        startActivity(main);
+                        Intent list = new Intent(getApplicationContext(), ListAll.class);
+                        startActivity(list);
                     }
                 }, 1000);
 
-                // Limpa os campos de entrada
-                // clearText();
+
             }
         });
     }

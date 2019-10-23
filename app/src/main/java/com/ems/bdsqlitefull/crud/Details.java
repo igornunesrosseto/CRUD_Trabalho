@@ -12,7 +12,6 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.ems.bdsqlitefull.MainActivity;
 import com.ems.bdsqlitefull.R;
 import com.ems.bdsqlitefull.pojo.Aluno;
 import com.ems.bdsqlitefull.utils.Message;
@@ -65,12 +64,12 @@ public class Details extends AppCompatActivity {
 
                         "id=" + aluno.getId()
                 );
-                // Cria uma caixa de mensagem e mostra os dados incluídos
+                // Cria uma caixa de mensagem e mostra os dados excluídos
                 Message message = new Message(Details.this);
                 message.show("Dados apagados com Sucesso!", aluno.getDados(), R.drawable.ic_add);
 
 
-                // chamando o metodo main com delay de 3s.
+                // chamando o activity main com delay de 1s.
 
                 Handler waitTime = new Handler();
                 waitTime.postDelayed(new Runnable() {

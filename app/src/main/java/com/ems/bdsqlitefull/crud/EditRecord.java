@@ -14,7 +14,6 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.ems.bdsqlitefull.MainActivity;
 import com.ems.bdsqlitefull.R;
 import com.ems.bdsqlitefull.pojo.Aluno;
 import com.ems.bdsqlitefull.utils.Message;
@@ -84,7 +83,7 @@ public class EditRecord extends AppCompatActivity {
                         novosDados.getDados(),
                         R.drawable.ic_add);
 
-                // chamando método main com delay 3s.
+                // chamando activity main com delay 1s.
 
                 Handler waitTime = new Handler();
                 waitTime.postDelayed(new Runnable() {

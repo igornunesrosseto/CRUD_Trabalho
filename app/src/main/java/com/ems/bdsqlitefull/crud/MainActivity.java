@@ -1,4 +1,4 @@
-package com.ems.bdsqlitefull;
+package com.ems.bdsqlitefull.crud;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,14 +7,13 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.ems.bdsqlitefull.crud.Insert;
-import com.ems.bdsqlitefull.crud.ListAll;
+import com.ems.bdsqlitefull.R;
 
 
 public class MainActivity extends AppCompatActivity {
 
     // Declaração dos botões
-    Button btInsert, btList, btSearch, btExit;
+    Button btInsert, btList, btExit;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,14 +33,11 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        // Associa o botão e configura a ação para abrr a tela de buscas
+        // Associa o botão de Listar e configura o evento do clique para abrir a tela de lista
         btList = findViewById(R.id.btMainList);
         btList.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Cria uma caixa de mensagem e mostra os dados incluídos
-                //Message message = new Message(MainActivity.this);
-                //message.show("Dados incluídos com sucesso!","Dados", R.drawable.ic_add);
 
                 Intent insert = new Intent(getApplicationContext(), ListAll.class);
                 startActivity(insert);

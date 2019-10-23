@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/bg3"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".crud.MainActivity">
 
     <Button
         android:id="@+id/btMainInsert2"
